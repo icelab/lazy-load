@@ -9,7 +9,7 @@ var DEFAULTS = {
 };
 
 // Cache
-var bottomOffset = 0;
+var bottomOffset;
 
 function getImages ( sel ) {
     return win.document.querySelectorAll( sel );
@@ -92,6 +92,7 @@ function bindScrollHandler ( imageOffsets, attrKey ) {
 }
 
 module.exports.init = function ( imageSel, attrKey ) {
+    bottomOffset = 0;
     imageSel = imageSel || DEFAULTS.IMAGE_SEL;
     attrKey  = attrKey  || DEFAULTS.ATTR_KEY;
 
